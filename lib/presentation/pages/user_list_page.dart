@@ -29,8 +29,8 @@ class _UserListPageState extends State<UserListPage> {
           canPop: false,
           child: BlocConsumer<UsersListCubit, UsersListState>(
             listener: (context, state) {
-                                                                      if (state is UserListFetchedSuccessState) {
-                                                                          userListCubit.refreshController.loadComplete();
+              if (state is UserListFetchedSuccessState) {
+                userListCubit.refreshController.loadComplete();
               }
             },
             builder: (context, UsersListState state) {
@@ -54,7 +54,6 @@ class _UserListPageState extends State<UserListPage> {
                         (userListCubit.totalPages ?? 1)) {
                       userListCubit.refreshController.loadNoData();
                     } else {
-
                       userListCubit.getNextData();
                     }
                   },
