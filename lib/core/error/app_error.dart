@@ -1,0 +1,5 @@
+
+
+class AppError implements Exception {
+
+}
