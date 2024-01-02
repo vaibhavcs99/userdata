@@ -6,7 +6,7 @@ import 'package:userdata/domain/entities/user_list_entity.dart';
 import 'package:userdata/domain/repositories/user_repository.dart';
 
 class FetchUserListUseCase
-    extends BaseUseCase<NetworkError, FetchUserListUseCaseParams, UserList> {
+    implements BaseUseCase<NetworkError, FetchUserListUseCaseParams, UserList> {
   final UserRepository userRepository;
 
   FetchUserListUseCase({required this.userRepository});
@@ -18,7 +18,7 @@ class FetchUserListUseCase
   }
 }
 
-class FetchUserListUseCaseParams extends Params {
+class FetchUserListUseCaseParams implements Params {
   final String? page;
   final String? perPage;
 

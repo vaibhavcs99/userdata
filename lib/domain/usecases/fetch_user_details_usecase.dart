@@ -5,7 +5,7 @@ import 'package:userdata/core/params/params.dart';
 import 'package:userdata/domain/entities/user_details_entity.dart';
 import 'package:userdata/domain/repositories/user_repository.dart';
 
-class FetchUserDetailsUseCase extends BaseUseCase<NetworkError,
+class FetchUserDetailsUseCase implements BaseUseCase<NetworkError,
     FetchUserDetailsUseCaseParams, UserDetails> {
   final UserRepository userRepository;
 
@@ -18,7 +18,7 @@ class FetchUserDetailsUseCase extends BaseUseCase<NetworkError,
   }
 }
 
-class FetchUserDetailsUseCaseParams extends Params {
+class FetchUserDetailsUseCaseParams implements Params {
   final String? userId;
 
   FetchUserDetailsUseCaseParams({required this.userId});

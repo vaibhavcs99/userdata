@@ -4,7 +4,7 @@ import 'package:userdata/data/data_sources/remote_data_sources/user/user_remote_
 import 'package:userdata/domain/usecases/fetch_user_details_usecase.dart';
 import 'package:userdata/domain/usecases/fetch_user_list_usecase.dart';
 
-class UserDataSourceImpl extends UserDataSource {
+class UserDataSourceImpl implements UserDataSource {
   final ApiService apiService;
 
   UserDataSourceImpl({required this.apiService});

@@ -10,7 +10,7 @@ import 'package:userdata/domain/repositories/user_repository.dart';
 import 'package:userdata/domain/usecases/fetch_user_details_usecase.dart';
 import 'package:userdata/domain/usecases/fetch_user_list_usecase.dart';
 
-class UserRepositoryImpl extends UserRepository {
+class UserRepositoryImpl implements UserRepository {
   final UserDataSource userDataSource;
 
   UserRepositoryImpl({required this.userDataSource});
